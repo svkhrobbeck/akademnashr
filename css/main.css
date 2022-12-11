@@ -1,0 +1,315 @@
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/roboto-v30-latin-regular.woff2") format("woff2"), url("../fonts/roboto-v30-latin-regular.woff") format("woff");
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../fonts/roboto-v30-latin-500.woff2") format("woff2"), url("../fonts/roboto-v30-latin-500.woff") format("woff");
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/roboto-v30-latin-700.woff2") format("woff2"), url("../fonts/roboto-v30-latin-700.woff") format("woff");
+}
+@font-face {
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/roboto-condensed-v25-latin-700.woff2") format("woff2"), url("../fonts/roboto-condensed-v25-latin-700.woff") format("woff");
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.button {
+  align-self: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #ffffff;
+  padding: 12px 24px;
+  background-color: #ff7500;
+  border-radius: 4px;
+  transition: 0.3s ease;
+}
+.button:hover {
+  opacity: 0.8;
+}
+.button:active {
+  opacity: 0.6;
+}
+
+.line {
+  display: inline-block;
+  background-color: #ff7500;
+  width: 80px;
+  height: 3px;
+}
+
+.site-header {
+  padding: 16px 0;
+  background-color: #ffffff;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.site-header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.site-header .logo__img {
+  transition: 0.3s ease;
+}
+.site-header .logo__img:hover {
+  opacity: 0.8;
+}
+.site-header .logo__img:active {
+  opacity: 0.6;
+}
+.site-header .site-nav__list {
+  display: flex;
+  gap: 32px;
+}
+.site-header .site-nav__link {
+  color: #000000;
+  font-weight: 500;
+  text-transform: uppercase;
+  position: relative;
+  transition: 0.5s ease;
+}
+.site-header .site-nav__link:hover {
+  opacity: 0.8;
+  color: #ff7500;
+}
+.site-header .site-nav__link:active {
+  opacity: 0.6;
+}
+.site-header .site-nav__link--active::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  height: 3px;
+  background-color: #ff7500;
+  left: 0;
+  bottom: -6px;
+}
+
+.hero-section {
+  background-color: #252420;
+}
+.hero-section .hero {
+  display: flex;
+  justify-content: space-between;
+  max-height: 488px;
+  padding-top: 40px;
+}
+.hero-section .hero-content {
+  width: 30%;
+}
+.hero-section .hero__line {
+  margin: 40px 0;
+}
+.hero-section .hero__title {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 40px;
+  color: #ffffff;
+  margin-bottom: 24px;
+}
+.hero-section .hero__description {
+  font-size: 16px;
+  font-weight: 400;
+  color: #ffffff;
+  margin-bottom: 32px;
+}
+.hero-section .hero__btn {
+  display: inline-block;
+}
+.hero-section .hero-image {
+  width: 60%;
+  display: flex;
+  position: relative;
+  justify-content: flex-end;
+}
+.hero-section .hero__img {
+  max-width: 510px;
+  max-height: 510px;
+  transform: translateX(24px);
+}
+
+.features-section .features {
+  margin-top: 209px;
+}
+.features-section .features__line {
+  margin-bottom: 24px;
+}
+.features-section .features__title {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 72px;
+  line-height: 86px;
+  margin-bottom: 72px;
+}
+.features-section .features__list {
+  display: flex;
+  gap: 15px;
+  justify-content: space-between;
+  width: 100%;
+}
+.features-section .features__item {
+  width: 27%;
+}
+.features-section .features-card-icon {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 117, 0, 0.2);
+  margin-bottom: 32px;
+}
+.features-section .features-card__heading {
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 26px;
+  color: #000000;
+  margin-bottom: 12px;
+}
+.features-section .features-card__description {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.sale-section .sale {
+  background-color: #252420;
+  margin-top: 330px;
+  display: flex;
+  justify-content: space-between;
+  padding: 64px;
+  border-radius: 12px;
+}
+.sale-section .sale-content {
+  width: 45%;
+}
+.sale-section .sale__title {
+  font-family: "Roboto Condensed", sans-serif;
+  color: #ffffff;
+  font-size: 40px;
+  line-height: 48px;
+  margin-bottom: 24px;
+}
+.sale-section .sale__description {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+.sale-section .sale__description strong {
+  color: #ff7500;
+  font-weight: 700;
+}
+.sale-section .sale__btn {
+  display: inline-block;
+  margin-top: 12px;
+}
+.sale-section .sale-image {
+  width: 50%;
+  position: relative;
+}
+.sale-section .sale__img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.footer {
+  margin-top: 160px;
+  background-color: #f8f8f8;
+  padding: 56px 0;
+}
+.footer-block__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  transition: 0.3s ease;
+}
+.footer-block__top .footer-logo__img:hover {
+  opacity: 0.8;
+}
+.footer-block__top .footer-logo__img:active {
+  opacity: 0.6;
+}
+.footer-block__socials {
+  display: flex;
+  gap: 16px;
+}
+.footer-block__socials .telegram-icon,
+.footer-block__socials .facebook-icon,
+.footer-block__socials .instagram-icon {
+  color: #252420;
+  transition: 0.3s ease;
+}
+.footer-block__socials .telegram-icon:hover,
+.footer-block__socials .facebook-icon:hover,
+.footer-block__socials .instagram-icon:hover {
+  color: #ff7500;
+}
+.footer-block__socials .telegram-icon:active,
+.footer-block__socials .facebook-icon:active,
+.footer-block__socials .instagram-icon:active {
+  opacity: 0.6;
+}
+.footer-block hr {
+  background: rgba(37, 36, 32, 0.5);
+  height: 2px;
+}
+.footer-block__list {
+  margin-top: 64px;
+  display: flex;
+  justify-content: space-between;
+}
+.footer-block__list ul li {
+  margin: 10px 0;
+}
+.footer-block__list ul li a {
+  color: #252420;
+  transition: 0.3s ease;
+}
+.footer-block__list ul li a:hover {
+  color: #ff7500;
+}
+.footer-block__list ul li a:active {
+  opacity: 0.6;
+}/*# sourceMappingURL=main.css.map */

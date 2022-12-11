@@ -1,0 +1,49 @@
+.hero-section {
+  background-color: $gray;
+
+  .hero {
+    display: flex;
+    justify-content: space-between;
+    max-height: 488px;
+    padding-top: 40px;
+
+    &-content {
+      width: 30%;
+    }
+
+    &__line {
+      margin: 40px 0;
+    }
+
+    &__title {
+      font-family: "Roboto Condensed", sans-serif;
+      font-size: 40px;
+      color: $white;
+      margin-bottom: 24px;
+    }
+
+    &__description {
+      font-size: 16px;
+      font-weight: 400;
+      color: $white;
+      margin-bottom: 32px;
+    }
+
+    &__btn {
+      display: inline-block;
+    }
+
+    &-image {
+      width: 60%;
+      display: flex;
+      position: relative;
+      justify-content: flex-end;
+    }
+
+    &__img {
+      max-width: 510px;
+      max-height: 510px;
+      transform: translateX(24px);
+    }
+  }
+}
