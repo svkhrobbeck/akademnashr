@@ -1,7 +1,12 @@
 .sale-section {
+  margin-top: 330px;
+
+  @media only screen and (max-width: $mobile) {
+    margin-top: 150px;
+  }
+
   .sale {
     background-color: $gray;
-    margin-top: 330px;
     display: flex;
     justify-content: space-between;
     padding: 64px;

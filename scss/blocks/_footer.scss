@@ -3,6 +3,10 @@
   background-color: $light;
   padding: 56px 0;
 
+  @media only screen and (max-width: $mobile) {
+    margin-top: 75px;
+  }
+
   &-block {
     &__top {
       display: flex;

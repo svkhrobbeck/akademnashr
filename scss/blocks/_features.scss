@@ -2,6 +2,10 @@
   .features {
     margin-top: 209px;
 
+    @media only screen and (max-width: $mobile) {
+      margin-top: 100px;
+    }
+
     &__line {
       margin-bottom: 24px;
 
@@ -20,12 +24,14 @@
       @media only screen and (max-width: $tablet-l) {
         font-size: 60px;
         line-height: 70px;
+        margin-bottom: 48px;
       }
 
       @media only screen and (max-width: $mobile) {
         text-align: center;
         font-size: 40px;
         line-height: 54px;
+        margin-bottom: 36px;
       }
     }
 
