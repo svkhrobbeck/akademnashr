@@ -256,7 +256,7 @@ body {
 @media only screen and (max-width: 768px) {
   .hero-section .hero {
     padding: 0 10px;
-    max-height: 368px;
+    max-height: 420px;
   }
 }
 @media only screen and (max-width: 576px) {
