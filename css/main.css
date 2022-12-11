@@ -118,6 +118,7 @@ body {
     position: static;
     background-color: transparent;
     padding: 16px 10px;
+    box-shadow: none;
   }
 }
 .site-header__container {
