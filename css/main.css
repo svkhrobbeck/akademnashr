@@ -113,6 +113,7 @@ body {
   .site-header {
     position: static;
     background-color: transparent;
+    padding: 16px 10px;
   }
 }
 .site-header__container {
