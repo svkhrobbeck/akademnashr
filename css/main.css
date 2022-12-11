@@ -641,9 +641,22 @@ body {
   opacity: 0.6;
 }
 .footer-block .copyright {
+  margin-top: 25px;
   text-align: center;
   font-size: 18px;
   font-weight: 500;
+  transition: 0.3s ease;
+}
+.footer-block .copyright:hover {
+  opacity: 0.8;
+}
+.footer-block .copyright:active {
+  opacity: 0.6;
+}
+@media only screen and (max-width: 768px) {
+  .footer-block .copyright {
+    font-size: 16px;
+  }
 }
 .footer-block .copyright a {
   color: #ff7500;

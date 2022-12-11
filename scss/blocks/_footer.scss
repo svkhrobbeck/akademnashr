@@ -95,9 +95,23 @@
     }
 
     .copyright {
+      margin-top: 25px;
       text-align: center;
       font-size: 18px;
       font-weight: 500;
+      transition: 0.3s ease;
+
+      &:hover {
+        opacity: 0.8;
+      }
+
+      &:active {
+        opacity: 0.6;
+      }
+
+      @media only screen and (max-width: $tablet) {
+        font-size: 16px;
+      }
 
       a {
         color: $orange;
