@@ -4,6 +4,11 @@
 
     &__line {
       margin-bottom: 24px;
+
+      @media only screen and (max-width: $mobile) {
+        margin: 0 auto;
+        display: block;
+      }
     }
 
     &__title {
@@ -11,6 +16,17 @@
       font-size: 72px;
       line-height: 86px;
       margin-bottom: 72px;
+
+      @media only screen and (max-width: $tablet-l) {
+        font-size: 60px;
+        line-height: 70px;
+      }
+
+      @media only screen and (max-width: $mobile) {
+        text-align: center;
+        font-size: 40px;
+        line-height: 54px;
+      }
     }
 
     &__list {
@@ -18,10 +34,20 @@
       gap: 15px;
       justify-content: space-between;
       width: 100%;
+
+      @media only screen and (max-width: $mobile) {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 60px;
+      }
     }
 
     &__item {
       width: 27%;
+
+      @media only screen and (max-width: $mobile) {
+        width: 60%;
+      }
     }
 
     &-card {
@@ -34,6 +60,12 @@
         justify-content: center;
         background: rgba(255, 117, 0, 0.2);
         margin-bottom: 32px;
+
+        @media only screen and (max-width: $tablet) {
+          width: 75px;
+          height: 75px;
+          margin: 0 auto 22px;
+        }
       }
 
       &__heading {
@@ -43,12 +75,23 @@
         line-height: 26px;
         color: $black;
         margin-bottom: 12px;
+
+        @media only screen and (max-width: $tablet) {
+          font-size: 20px;
+          line-height: 22px;
+          text-align: center;
+        }
       }
 
       &__description {
         font-weight: 400;
         font-size: 16px;
         line-height: 24px;
+
+        @media only screen and (max-width: $tablet) {
+          font-size: 15px;
+          text-align: center;
+        }
       }
     }
   }

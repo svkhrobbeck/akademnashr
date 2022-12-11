@@ -48,12 +48,28 @@
 
 body {
   font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
 }
 
 .container {
-  max-width: 1100px;
+  max-width: $desktop;
   width: 100%;
   margin: 0 auto;
+}
+
+// Visually-hidden styles
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 // Button styles
@@ -62,6 +78,7 @@ body {
   text-transform: uppercase;
   font-weight: 700;
   color: $white;
+  font-size: 13px;
   padding: 12px 24px;
   background-color: $orange;
   border-radius: 4px;
@@ -72,6 +89,15 @@ body {
   }
   &:active {
     opacity: 0.6;
+  }
+
+  @media only screen and (max-width: $tablet-l) {
+    font-size: 12px;
+  }
+
+  @media only screen and (max-width: $tablet) {
+    padding: 7px 14px;
+    white-space: nowrap;
   }
 }
 

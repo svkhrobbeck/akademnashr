@@ -7,8 +7,27 @@
     padding: 64px;
     border-radius: 12px;
 
+    @media only screen and (max-width: $tablet-l) {
+      padding: 50px;
+    }
+
+    @media only screen and (max-width: $tablet) {
+      padding: 40px;
+    }
+
+    @media only screen and (max-width: $mobile) {
+      align-items: center;
+      flex-direction: column-reverse;
+      gap: 30px;
+    }
+
     &-content {
       width: 45%;
+
+      @media only screen and (max-width: $mobile) {
+        width: 100%;
+        text-align: center;
+      }
     }
 
     &__title {
@@ -17,6 +36,11 @@
       font-size: 40px;
       line-height: 48px;
       margin-bottom: 24px;
+
+      @media only screen and (max-width: $tablet-l) {
+        font-size: 32px;
+        line-height: 38px;
+      }
     }
 
     &__description {
@@ -26,6 +50,10 @@
       color: $white;
       margin-bottom: 12px;
 
+      @media only screen and (max-width: $tablet-l) {
+        font-size: 15px;
+        line-height: 19px;
+      }
       strong {
         color: $orange;
         font-weight: 700;
@@ -40,12 +68,36 @@
     &-image {
       width: 50%;
       position: relative;
+
+      @media only screen and (max-width: $tablet) {
+        align-self: center;
+      }
+
+      @media only screen and (max-width: $mobile) {
+        width: 100%;
+        text-align: center;
+      }
     }
 
     &__img {
       position: absolute;
       bottom: 0;
       right: 0;
+
+      @media only screen and (max-width: $tablet-l) {
+        max-width: 360px;
+        max-height: 360px;
+      }
+
+      @media only screen and (max-width: $tablet) {
+        max-width: 340px;
+        max-height: 340px;
+        position: static;
+        width: auto;
+        height: auto;
+        width: 100%;
+        object-fit: contain;
+      }
     }
   }
 }
