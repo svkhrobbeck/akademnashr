@@ -259,7 +259,7 @@ body {
     align-items: center;
     justify-content: space-between;
     max-height: none;
-    padding: 0 15px 30px;
+    padding: 20px 15px 30px;
   }
 }
 .hero-section .hero-content {
@@ -325,9 +325,9 @@ body {
 }
 @media only screen and (max-width: 576px) {
   .hero-section .hero-image {
-    width: 80%;
+    width: 100%;
     display: flex;
-    align-items: center;
+    justify-content: center;
   }
 }
 .hero-section .hero__img {
@@ -347,7 +347,8 @@ body {
   .hero-section .hero__img {
     max-width: none;
     max-height: none;
-    width: 100%;
+    width: 90%;
+    height: auto;
   }
 }
 

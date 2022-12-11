@@ -17,7 +17,7 @@
       align-items: center;
       justify-content: space-between;
       max-height: none;
-      padding: 0 15px 30px;
+      padding: 20px 15px 30px;
     }
 
     &-content {
@@ -81,9 +81,9 @@
       }
 
       @media only screen and (max-width: $mobile) {
-        width: 80%;
+        width: 100%;
         display: flex;
-        align-items: center;
+        justify-content: center;
       }
     }
 
@@ -101,7 +101,8 @@
       @media only screen and (max-width: $mobile) {
         max-width: none;
         max-height: none;
-        width: 100%;
+        width: 90%;
+        height: auto;
       }
     }
   }
