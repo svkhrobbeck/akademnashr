@@ -93,5 +93,16 @@
         }
       }
     }
+
+    .copyright {
+      text-align: center;
+      font-size: 18px;
+      font-weight: 500;
+
+      a {
+        color: $orange;
+        text-transform: uppercase;
+      }
+    }
   }
 }
