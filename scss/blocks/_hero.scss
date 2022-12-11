@@ -7,17 +7,22 @@
     max-height: 488px;
     padding-top: 40px;
 
+    @media only screen and (max-width: $tablet-l) {
+      max-height: 428px;
+    }
+
     @media only screen and (max-width: $tablet) {
       padding: 0 10px;
-      max-width: none;
+      max-height: 368px;
     }
 
     @media only screen and (max-width: $mobile) {
       flex-direction: column-reverse;
       align-items: center;
       justify-content: space-between;
+      padding: 35px 15px 30px;
       max-height: none;
-      padding: 20px 15px 30px;
+      gap: 30px;
     }
 
     &-content {
@@ -90,12 +95,14 @@
     &__img {
       max-width: 510px;
       max-height: 510px;
+      filter: drop-shadow(24px 24px 0px rgba(255, 117, 0, 0.6));
 
       @media only screen and (max-width: $tablet-l) {
         max-width: 440px;
         max-height: 440px;
         width: 100%;
         object-fit: contain;
+        filter: drop-shadow(20px 20px 0px rgba(255, 117, 0, 0.6));
       }
 
       @media only screen and (max-width: $mobile) {
@@ -103,6 +110,7 @@
         max-height: none;
         width: 90%;
         height: auto;
+        filter: drop-shadow(16px 16px 0px rgba(255, 117, 0, 0.6));
       }
     }
   }
