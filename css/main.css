@@ -330,6 +330,7 @@ body {
   display: flex;
   position: relative;
   justify-content: flex-end;
+  border-radius: 8px;
 }
 @media only screen and (max-width: 992px) {
   .hero-section .hero-image {
@@ -346,6 +347,7 @@ body {
 .hero-section .hero__img {
   max-width: 510px;
   max-height: 510px;
+  border-radius: 8px;
   filter: drop-shadow(24px 24px 0px rgba(255, 117, 0, 0.6));
 }
 @media only screen and (max-width: 992px) {
@@ -427,23 +429,6 @@ body {
     width: 60%;
   }
 }
-.features-section .features-card-icon {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(255, 117, 0, 0.2);
-  margin-bottom: 32px;
-}
-@media only screen and (max-width: 768px) {
-  .features-section .features-card-icon {
-    width: 75px;
-    height: 75px;
-    margin: 0 auto 22px;
-  }
-}
 .features-section .features-card__heading {
   font-family: "Roboto Condensed", sans-serif;
   font-weight: 700;
@@ -451,6 +436,33 @@ body {
   line-height: 26px;
   color: #000000;
   margin-bottom: 12px;
+}
+.features-section .features-card__heading::before {
+  content: "";
+  background: url(../../img/cursor-click.svg) no-repeat center;
+  border-radius: 50%;
+  display: block;
+  background-color: rgba(255, 117, 0, 0.2);
+  margin-bottom: 32px;
+  width: 100px;
+  height: 100px;
+}
+@media only screen and (max-width: 768px) {
+  .features-section .features-card__heading::before {
+    width: 75px;
+    height: 75px;
+    margin: 0 auto 22px;
+  }
+}
+.features-section .features-card__heading--sparkles::before {
+  content: "";
+  background: url(../../img/sparkles.svg) no-repeat center;
+  background-color: rgba(255, 117, 0, 0.2);
+}
+.features-section .features-card__heading--lighting-bolt::before {
+  content: "";
+  background: url(../../img/lightning-bolt.svg) no-repeat center;
+  background-color: rgba(255, 117, 0, 0.2);
 }
 @media only screen and (max-width: 768px) {
   .features-section .features-card__heading {
@@ -565,6 +577,7 @@ body {
   position: absolute;
   bottom: 0;
   right: 0;
+  border-radius: 15px;
 }
 @media only screen and (max-width: 992px) {
   .sale-section .sale__img {

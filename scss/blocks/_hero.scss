@@ -80,6 +80,7 @@
       display: flex;
       position: relative;
       justify-content: flex-end;
+      border-radius: 8px;
 
       @media only screen and (max-width: $tablet-l) {
         width: 50%;
@@ -95,6 +96,7 @@
     &__img {
       max-width: 510px;
       max-height: 510px;
+      border-radius: 8px;
       filter: drop-shadow(24px 24px 0px rgba(255, 117, 0, 0.6));
 
       @media only screen and (max-width: $tablet-l) {
