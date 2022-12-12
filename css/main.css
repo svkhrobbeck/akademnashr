@@ -238,6 +238,12 @@ body {
     color: #ffffff;
   }
 }
+@media only screen and (max-width: 576px) {
+  .site-header .site-nav__link {
+    font-size: 16px;
+    color: #ffffff;
+  }
+}
 
 .hero-section {
   background-color: #252420;
