@@ -4,6 +4,7 @@
   position: sticky;
   top: 0;
   z-index: 10;
+  border-top: 5px solid $orange;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
   @media only screen and (max-width: $tablet-l) {
@@ -60,18 +61,13 @@
   #menu,
   #close {
     position: fixed;
-    font-size: 40px;
-    top: 12px;
+    font-size: 45px;
+    top: 22px;
     right: 10px;
     z-index: 101;
     background-color: $orange;
     border-radius: 5px;
     display: none;
-
-    @media only screen and (max-width: $mobile) {
-      font-size: 32px;
-      top: 15px;
-    }
   }
 
   #menu {
