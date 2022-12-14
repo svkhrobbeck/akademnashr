@@ -91,7 +91,7 @@ body {
   padding: 12px 24px;
   background-color: $orange;
   border-radius: 4px;
-  transition: 0.3s ease;
+  transition: opacity 0.3s ease;
 
   &:hover {
     opacity: 0.8;
