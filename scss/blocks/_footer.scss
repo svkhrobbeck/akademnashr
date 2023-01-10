@@ -44,6 +44,7 @@
       .telegram-icon,
       .facebook-icon,
       .instagram-icon {
+        display: flex;
         color: var(--secondary-bg-color);
         transition: color 0.3s ease, opacity 0.4s ease;
 
