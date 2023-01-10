@@ -6,7 +6,7 @@
   }
 
   .sale {
-    background-color: $gray;
+    background-color: var(--secondary-bg-color);
     display: flex;
     justify-content: space-between;
     padding: 64px;
@@ -37,7 +37,7 @@
 
     &__title {
       font-family: "Roboto Condensed", sans-serif;
-      color: $white;
+      color: var(--primary-bg-color);
       font-size: 40px;
       line-height: 48px;
       margin-bottom: 24px;
@@ -52,7 +52,7 @@
       font-weight: 400;
       font-size: 16px;
       line-height: 24px;
-      color: $white;
+      color: var(--primary-bg-color);
       margin-bottom: 12px;
 
       @media only screen and (max-width: $tablet-l) {
@@ -60,7 +60,7 @@
         line-height: 19px;
       }
       strong {
-        color: $orange;
+        color: var(--accent-color);
         font-weight: 700;
       }
     }

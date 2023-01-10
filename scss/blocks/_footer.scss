@@ -1,6 +1,6 @@
 .footer {
   margin-top: 160px;
-  background-color: $light;
+  background-color: var(--footer-bg);
   padding: 56px 0;
 
   @media only screen and (max-width: $mobile) {
@@ -44,11 +44,11 @@
       .telegram-icon,
       .facebook-icon,
       .instagram-icon {
-        color: $gray;
+        color: var(--secondary-bg-color);
         transition: color 0.3s ease, opacity 0.4s ease;
 
         &:hover {
-          color: $orange;
+          color: var(--accent-color);
         }
 
         &:active {
@@ -83,12 +83,12 @@
           margin: 10px 0;
 
           a {
-            color: $gray;
+            color: var(--secondary-bg-color);
             transition: color 0.3s ease, opacity 0.4s ease;
             font-size: 16px;
 
             &:hover {
-              color: $orange;
+              color: var(--accent-color);
             }
 
             &:active {
@@ -102,7 +102,7 @@
     .copyright {
       margin: 25px 0;
       text-align: center;
-      font-family: "Roboto Condensed", sans-serif;
+      font-family: var(--secondary-font-family);
       font-size: 18px;
       font-weight: 700;
       transition: opacity 0.3s ease;
@@ -120,7 +120,7 @@
       }
 
       a {
-        color: $orange;
+        color: var(--accent-color);
         text-transform: uppercase;
       }
     }

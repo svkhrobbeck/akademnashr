@@ -1,38 +1,4 @@
-// Fonts
-@font-face {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("../fonts/roboto-v30-latin-regular.woff2") format("woff2"),
-    url("../fonts/roboto-v30-latin-regular.woff") format("woff");
-}
-@font-face {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url("../fonts/roboto-v30-latin-500.woff2") format("woff2"),
-    url("../fonts/roboto-v30-latin-500.woff") format("woff");
-}
-@font-face {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url("../fonts/roboto-v30-latin-700.woff2") format("woff2"),
-    url("../fonts/roboto-v30-latin-700.woff") format("woff");
-}
-@font-face {
-  font-family: "Roboto Condensed";
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url("../fonts/roboto-condensed-v25-latin-700.woff2") format("woff2"),
-    url("../fonts/roboto-condensed-v25-latin-700.woff") format("woff");
-}
-
-// General styles
+/* General styles */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -43,7 +9,7 @@
 
 *:focus {
   outline-offset: 3px;
-  outline: 2px dotted $black;
+  outline: 2px dashed var(--accent-color);
 }
 
 *::before,
@@ -56,7 +22,7 @@ html {
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: var(--primary-font-family);
   overflow-x: hidden;
 }
 
@@ -74,7 +40,6 @@ body {
   margin: -1px;
   border: 0;
   padding: 0;
-
   white-space: nowrap;
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
@@ -86,10 +51,10 @@ body {
   align-self: center;
   text-transform: uppercase;
   font-weight: 700;
-  color: $white;
+  color: var(--primary-bg-color);
   font-size: 13px;
   padding: 12px 24px;
-  background-color: $orange;
+  background-color: var(--accent-color);
   border-radius: 4px;
   transition: opacity 0.3s ease;
 
@@ -113,7 +78,7 @@ body {
 // Line styles
 .line {
   display: inline-block;
-  background-color: $orange;
+  background-color: var(--accent-color);
   width: 80px;
   height: 3px;
 }

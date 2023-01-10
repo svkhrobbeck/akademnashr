@@ -1,10 +1,10 @@
 .site-header {
   padding: 16px 0;
-  background-color: $white;
+  background-color: var(--primary-bg-color);
   position: sticky;
   top: 0;
   z-index: 10;
-  border-top: 5px solid $orange;
+  border-top: 5px solid var(--accent-color);
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
   @media only screen and (max-width: $tablet-l) {
@@ -65,7 +65,7 @@
     top: 22px;
     right: 10px;
     z-index: 101;
-    background-color: $orange;
+    background-color: var(--accent-color);
     border-radius: 5px;
     display: none;
   }
@@ -90,7 +90,7 @@
         justify-content: flex-end;
         height: 100vh;
         width: 65%;
-        background-color: $gray;
+        background-color: var(--secondary-bg-color);
         position: fixed;
         z-index: 100;
         right: -100%;
@@ -102,7 +102,7 @@
     }
 
     &__link {
-      color: $black;
+      color: var(--title-color);
       font-size: 15px;
       font-weight: 600;
       text-transform: uppercase;
@@ -111,7 +111,7 @@
 
       &:hover {
         opacity: 0.8;
-        color: $orange;
+        color: var(--accent-color);
       }
 
       &:active {
@@ -124,7 +124,7 @@
           width: 100%;
           position: absolute;
           height: 3px;
-          background-color: $orange;
+          background-color: var(--accent-color);
           left: 0;
           bottom: -6px;
         }
@@ -136,12 +136,12 @@
 
       @media only screen and (max-width: $tablet) {
         font-size: 12px;
-        color: $white;
+        color: var(--primary-bg-color);
       }
 
       @media only screen and (max-width: $mobile) {
         font-size: 16px;
-        color: $white;
+        color: var(--primary-bg-color);
       }
     }
   }
