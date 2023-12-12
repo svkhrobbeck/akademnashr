@@ -1,116 +1,112 @@
-.features-section {
-  .features {
-    margin-top: 209px;
+.features__container {
+  margin-top: 209px;
 
-    @media only screen and (max-width: $mobile) {
-      margin-top: 100px;
+  @media only screen and (max-width: $mobile) {
+    margin-top: 100px;
+  }
+}
+
+.features__line {
+  margin-bottom: 24px;
+
+  @media only screen and (max-width: $mobile) {
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+.features__title {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 72px;
+  line-height: 86px;
+  margin-bottom: 72px;
+
+  @media only screen and (max-width: $tablet-l) {
+    font-size: 60px;
+    line-height: 70px;
+    margin-bottom: 48px;
+  }
+
+  @media only screen and (max-width: $mobile) {
+    text-align: center;
+    font-size: 40px;
+    line-height: 54px;
+    margin-bottom: 36px;
+  }
+}
+
+.features__list {
+  display: flex;
+  gap: 15px;
+  justify-content: space-between;
+  width: 100%;
+
+  @media only screen and (max-width: $mobile) {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px;
+  }
+}
+
+.features__item {
+  width: 27%;
+
+  @media only screen and (max-width: $mobile) {
+    width: 60%;
+  }
+}
+
+.features-card__heading {
+  font-family: var(--secondary-font-family);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 26px;
+  color: var(--title-color);
+  margin-bottom: 12px;
+
+  &::before {
+    content: "";
+    background: url(../../img/cursor-click.svg) no-repeat center;
+    border-radius: 50%;
+    display: block;
+    background-color: rgba(255, 117, 0, 0.2);
+    margin-bottom: 32px;
+    width: 100px;
+    height: 100px;
+
+    @media only screen and (max-width: $tablet) {
+      width: 75px;
+      height: 75px;
+      margin: 0 auto 22px;
     }
+  }
 
-    &__line {
-      margin-bottom: 24px;
+  &--sparkles::before {
+    content: "";
+    background: url(../../img/sparkles.svg) no-repeat center;
+    background-color: rgba(255, 117, 0, 0.2);
+  }
 
-      @media only screen and (max-width: $mobile) {
-        margin: 0 auto;
-        display: block;
-      }
-    }
+  &--lighting-bolt::before {
+    content: "";
+    background: url(../../img/lightning-bolt.svg) no-repeat center;
+    background-color: rgba(255, 117, 0, 0.2);
+  }
 
-    &__title {
-      font-family: "Roboto Condensed", sans-serif;
-      font-size: 72px;
-      line-height: 86px;
-      margin-bottom: 72px;
+  @media only screen and (max-width: $tablet) {
+    font-size: 20px;
+    line-height: 22px;
+    text-align: center;
+  }
+}
 
-      @media only screen and (max-width: $tablet-l) {
-        font-size: 60px;
-        line-height: 70px;
-        margin-bottom: 48px;
-      }
+.features-card__description {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
 
-      @media only screen and (max-width: $mobile) {
-        text-align: center;
-        font-size: 40px;
-        line-height: 54px;
-        margin-bottom: 36px;
-      }
-    }
-
-    &__list {
-      display: flex;
-      gap: 15px;
-      justify-content: space-between;
-      width: 100%;
-
-      @media only screen and (max-width: $mobile) {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 60px;
-      }
-    }
-
-    &__item {
-      width: 27%;
-
-      @media only screen and (max-width: $mobile) {
-        width: 60%;
-      }
-    }
-
-    &-card {
-      &__heading {
-        font-family: var(--secondary-font-family);
-        font-weight: 700;
-        font-size: 24px;
-        line-height: 26px;
-        color: var(--title-color);
-        margin-bottom: 12px;
-
-        &::before {
-          content: "";
-          background: url(../../img/cursor-click.svg) no-repeat center;
-          border-radius: 50%;
-          display: block;
-          background-color: rgba(255, 117, 0, 0.2);
-          margin-bottom: 32px;
-          width: 100px;
-          height: 100px;
-
-          @media only screen and (max-width: $tablet) {
-            width: 75px;
-            height: 75px;
-            margin: 0 auto 22px;
-          }
-        }
-
-        &--sparkles::before {
-          content: "";
-          background: url(../../img/sparkles.svg) no-repeat center;
-          background-color: rgba(255, 117, 0, 0.2);
-        }
-
-        &--lighting-bolt::before {
-          content: "";
-          background: url(../../img/lightning-bolt.svg) no-repeat center;
-          background-color: rgba(255, 117, 0, 0.2);
-        }
-
-        @media only screen and (max-width: $tablet) {
-          font-size: 20px;
-          line-height: 22px;
-          text-align: center;
-        }
-      }
-
-      &__description {
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 24px;
-
-        @media only screen and (max-width: $tablet) {
-          font-size: 15px;
-          text-align: center;
-        }
-      }
-    }
+  @media only screen and (max-width: $tablet) {
+    font-size: 15px;
+    text-align: center;
   }
 }

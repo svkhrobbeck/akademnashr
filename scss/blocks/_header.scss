@@ -1,4 +1,4 @@
-.site-header {
+.header {
   padding: 16px 0;
   background-color: var(--primary-bg-color);
   position: sticky;
@@ -14,19 +14,60 @@
     box-shadow: none;
   }
 
-  &__container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  .hamburger-bar__input:checked {
+    & + {
+      .hamburger-bar__label .hamburger-bar__menu {
+        display: none;
+      }
+      .hamburger-bar__label .hamburger-bar__close {
+        display: block;
+      }
+    }
 
-    @media only screen and (max-width: $tablet) {
-      font-size: 12px;
-      align-items: flex-start;
+    & ~ {
+      .nav .nav__list {
+        right: 0;
+      }
     }
   }
 
-  .logo__img {
+  .hamburger-bar__menu,
+  .hamburger-bar__close {
+    position: fixed;
+    font-size: 45px;
+    top: 22px;
+    right: 10px;
+    z-index: 101;
+    background-color: var(--accent-color);
+    border-radius: 5px;
+    display: none;
+  }
+
+  .hamburger-bar__menu {
+    @media only screen and (max-width: $tablet) {
+      display: block;
+    }
+  }
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media only screen and (max-width: $tablet) {
+    font-size: 12px;
+    align-items: flex-start;
+  }
+}
+
+.logo {
+  display: flex;
+
+  &__img {
     transition: opacity 0.3s ease;
+    max-width: 227px;
+    width: 100%;
 
     &:hover {
       opacity: 0.8;
@@ -40,109 +81,78 @@
       max-width: 170px;
     }
   }
+}
 
-  #hamburger-bar:checked {
-    + {
-      .hamburger-icons #menu {
-        display: none;
-      }
-      .hamburger-icons #close {
-        display: block;
-      }
-    }
+.hamburger-bar__close,
+.hamburger-bar__menu {
+  width: 32px;
+  height: auto;
+}
 
-    ~ {
-      .site-nav .site-nav__list {
-        right: 0;
-      }
-    }
+.nav__list {
+  display: flex;
+  gap: 32px;
+
+  @media only screen and (max-width: $tablet-l) {
+    gap: 24px;
   }
 
-  #menu,
-  #close {
+  @media only screen and (max-width: $tablet) {
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    height: 100vh;
+    width: 65%;
+    background-color: var(--secondary-bg-color);
     position: fixed;
-    font-size: 45px;
-    top: 22px;
-    right: 10px;
-    z-index: 101;
-    background-color: var(--accent-color);
-    border-radius: 5px;
-    display: none;
+    z-index: 100;
+    right: -100%;
+    top: 0;
+    padding: 24px;
+    transition: 0.4s ease;
+    box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 25px;
+  }
+}
+
+.nav__link {
+  color: var(--title-color);
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  position: relative;
+  transition: opacity 0.5s ease, color 0.4s ease;
+
+  &:hover {
+    opacity: 0.8;
+    color: var(--accent-color);
   }
 
-  #menu {
-    @media only screen and (max-width: $tablet) {
-      display: block;
+  &:active {
+    opacity: 0.6;
+  }
+
+  &--active {
+    &::after {
+      content: "";
+      width: 100%;
+      position: absolute;
+      height: 3px;
+      background-color: var(--accent-color);
+      left: 0;
+      bottom: -6px;
     }
   }
 
-  .site-nav {
-    &__list {
-      display: flex;
-      gap: 32px;
+  @media only screen and (max-width: $tablet-l) {
+    font-size: 12px;
+  }
 
-      @media only screen and (max-width: $tablet-l) {
-        gap: 24px;
-      }
+  @media only screen and (max-width: $tablet) {
+    font-size: 12px;
+    color: var(--primary-bg-color);
+  }
 
-      @media only screen and (max-width: $tablet) {
-        flex-direction: column-reverse;
-        justify-content: flex-end;
-        height: 100vh;
-        width: 65%;
-        background-color: var(--secondary-bg-color);
-        position: fixed;
-        z-index: 100;
-        right: -100%;
-        top: 0;
-        padding: 24px;
-        transition: 1s ease;
-        box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 25px;
-      }
-    }
-
-    &__link {
-      color: var(--title-color);
-      font-size: 15px;
-      font-weight: 600;
-      text-transform: uppercase;
-      position: relative;
-      transition: opacity 0.5s ease, color 0.4s ease;
-
-      &:hover {
-        opacity: 0.8;
-        color: var(--accent-color);
-      }
-
-      &:active {
-        opacity: 0.6;
-      }
-
-      &--active {
-        &::after {
-          content: "";
-          width: 100%;
-          position: absolute;
-          height: 3px;
-          background-color: var(--accent-color);
-          left: 0;
-          bottom: -6px;
-        }
-      }
-
-      @media only screen and (max-width: $tablet-l) {
-        font-size: 12px;
-      }
-
-      @media only screen and (max-width: $tablet) {
-        font-size: 12px;
-        color: var(--primary-bg-color);
-      }
-
-      @media only screen and (max-width: $mobile) {
-        font-size: 16px;
-        color: var(--primary-bg-color);
-      }
-    }
+  @media only screen and (max-width: $mobile) {
+    font-size: 16px;
+    color: var(--primary-bg-color);
   }
 }

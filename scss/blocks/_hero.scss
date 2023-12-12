@@ -1,117 +1,117 @@
-.hero-section {
+.hero {
   background-color: var(--secondary-bg-color);
+}
 
-  .hero {
-    display: flex;
+.hero__container {
+  display: flex;
+  justify-content: space-between;
+
+  @media only screen and (max-width: $tablet-l) {
+    max-height: 428px;
+  }
+
+  @media only screen and (max-width: $tablet) {
+    padding: 0 10px;
+    max-height: 420px;
+  }
+
+  @media only screen and (max-width: $mobile) {
+    flex-direction: column-reverse;
+    align-items: center;
     justify-content: space-between;
+    padding: 35px 15px 30px;
+    max-height: none;
+    gap: 30px;
+  }
+}
 
-    @media only screen and (max-width: $tablet-l) {
-      max-height: 428px;
-    }
+.hero__content {
+  width: 30%;
 
-    @media only screen and (max-width: $tablet) {
-      padding: 0 10px;
-      max-height: 420px;
-    }
+  @media only screen and (max-width: $tablet-l) {
+    width: 40%;
+    padding-left: 10px;
+  }
 
-    @media only screen and (max-width: $mobile) {
-      flex-direction: column-reverse;
-      align-items: center;
-      justify-content: space-between;
-      padding: 35px 15px 30px;
-      max-height: none;
-      gap: 30px;
-    }
+  @media only screen and (max-width: $mobile) {
+    width: 100%;
+    text-align: center;
+  }
+}
 
-    &-content {
-      width: 30%;
+.hero__line {
+  margin: 40px 0;
 
-      @media only screen and (max-width: $tablet-l) {
-        width: 40%;
-        padding-left: 10px;
-      }
+  @media only screen and (max-width: $tablet-l) {
+    margin: 25px 0;
+  }
+}
 
-      @media only screen and (max-width: $mobile) {
-        width: 100%;
-        text-align: center;
-      }
-    }
+.hero__title {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 40px;
+  color: var(--primary-bg-color);
+  margin-bottom: 24px;
 
-    &__line {
-      margin: 40px 0;
+  @media only screen and (max-width: $tablet-l) {
+    font-size: 34px;
+    margin-bottom: 20px;
+  }
+}
 
-      @media only screen and (max-width: $tablet-l) {
-        margin: 25px 0;
-      }
-    }
+.hero__description {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--primary-bg-color);
+  margin-bottom: 32px;
 
-    &__title {
-      font-family: "Roboto Condensed", sans-serif;
-      font-size: 40px;
-      color: var(--primary-bg-color);
-      margin-bottom: 24px;
+  @media only screen and (max-width: $tablet-l) {
+    font-size: 15px;
+    margin-bottom: 26px;
+  }
+}
 
-      @media only screen and (max-width: $tablet-l) {
-        font-size: 34px;
-        margin-bottom: 20px;
-      }
-    }
+.hero__btn {
+  display: inline-block;
+}
 
-    &__description {
-      font-size: 16px;
-      font-weight: 400;
-      color: var(--primary-bg-color);
-      margin-bottom: 32px;
+.hero__img-wrapper {
+  width: 60%;
+  display: flex;
+  justify-content: flex-end;
+  transform: translateY(40px);
+  border-radius: 8px;
+  transition: transform 0.4s ease;
 
-      @media only screen and (max-width: $tablet-l) {
-        font-size: 15px;
-        margin-bottom: 26px;
-      }
-    }
+  @media only screen and (max-width: $tablet-l) {
+    width: 50%;
+    transform: translateY(0);
+  }
 
-    &__btn {
-      display: inline-block;
-    }
+  @media only screen and (max-width: $mobile) {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
 
-    &-image {
-      width: 60%;
-      display: flex;
-      justify-content: flex-end;
-      transform: translateY(40px);
-      border-radius: 8px;
-      transition: transform .4s ease;
+.hero__img {
+  max-width: 510px;
+  max-height: 510px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 24px 24px 0px rgba(255, 117, 0, 0.6);
 
-      @media only screen and (max-width: $tablet-l) {
-        width: 50%;
-        transform: translateY(0);
-      }
+  @media only screen and (max-width: $tablet-l) {
+    object-fit: contain;
+    box-shadow: none;
+  }
 
-      @media only screen and (max-width: $mobile) {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-      }
-    }
-
-    &__img {
-      max-width: 510px;
-      max-height: 510px;
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-      box-shadow: 24px 24px 0px rgba(255, 117, 0, 0.6);
-
-      @media only screen and (max-width: $tablet-l) {
-        object-fit: contain;
-        box-shadow: none;
-      }
-
-      @media only screen and (max-width: $mobile) {
-        max-width: none;
-        max-height: none;
-        width: 90%;
-        height: auto;
-      }
-    }
+  @media only screen and (max-width: $mobile) {
+    max-width: none;
+    max-height: none;
+    width: 90%;
+    height: auto;
   }
 }

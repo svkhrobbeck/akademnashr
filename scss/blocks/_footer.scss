@@ -6,124 +6,102 @@
   @media only screen and (max-width: $mobile) {
     margin-top: 75px;
   }
+}
 
-  &-block {
-    &__top {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 40px;
+.footer__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
 
-      @media only screen and (max-width: $mobile) {
-        flex-direction: column;
-        justify-content: center;
-        gap: 30px;
-      }
-
-      .footer-logo__img {
-        transition: opacity 0.3s ease;
-
-        &:hover {
-          opacity: 0.8;
-        }
-
-        &:active {
-          opacity: 0.6;
-        }
-
-        @media only screen and (max-width: $mobile) {
-          max-width: 200px;
-        }
-      }
-    }
-
-    &__socials {
-      display: flex;
-      gap: 16px;
-
-      .telegram-icon,
-      .facebook-icon,
-      .instagram-icon {
-        display: flex;
-        color: var(--secondary-bg-color);
-        transition: color 0.3s ease, opacity 0.4s ease;
-
-        &:hover {
-          color: var(--accent-color);
-        }
-
-        &:active {
-          opacity: 0.6;
-        }
-      }
-    }
-
-    hr {
-      background: rgba(37, 36, 32, 0.5);
-      height: 2px;
-    }
-
-    &__list {
-      margin-top: 64px;
-      display: flex;
-      justify-content: space-around;
-
-      @media only screen and (max-width: $tablet) {
-        margin-top: 40px;
-      }
-
-      @media only screen and (max-width: $tablet) {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 30px;
-      }
-
-      ul {
-        li {
-          margin: 10px 0;
-
-          a {
-            color: var(--secondary-bg-color);
-            transition: color 0.3s ease, opacity 0.4s ease;
-            font-size: 16px;
-
-            &:hover {
-              color: var(--accent-color);
-            }
-
-            &:active {
-              opacity: 0.6;
-            }
-          }
-        }
-      }
-    }
-
-    .copyright {
-      margin: 25px 0;
-      text-align: center;
-      font-family: var(--secondary-font-family);
-      font-size: 18px;
-      font-weight: 700;
-      transition: opacity 0.3s ease;
-
-      &:hover {
-        opacity: 0.8;
-      }
-
-      &:active {
-        opacity: 0.6;
-      }
-
-      @media only screen and (max-width: $tablet) {
-        font-size: 16px;
-      }
-
-      a {
-        color: var(--accent-color);
-        text-transform: uppercase;
-      }
-    }
+  @media only screen and (max-width: $mobile) {
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
   }
+}
+
+.footer__socials {
+  display: flex;
+  gap: 16px;
+}
+
+.footer__social-icon {
+  display: flex;
+  color: var(--secondary-bg-color);
+  transition: color 0.3s ease, opacity 0.4s ease;
+
+  &:hover {
+    color: var(--accent-color);
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.footer__divider {
+  background: rgba(37, 36, 32, 0.5);
+  height: 2px;
+}
+
+.footer__list {
+  margin-top: 64px;
+  display: flex;
+  justify-content: space-around;
+
+  @media only screen and (max-width: $tablet) {
+    margin-top: 40px;
+  }
+
+  @media only screen and (max-width: $tablet) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px 30px;
+  }
+}
+
+.item-footer__item {
+  margin: 10px 0;
+}
+
+.item-footer__link {
+  color: var(--secondary-bg-color);
+  transition: color 0.3s ease, opacity 0.4s ease;
+  font-size: 16px;
+
+  &:hover {
+    color: var(--accent-color);
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.footer-copyright {
+  margin: 25px 0;
+  text-align: center;
+  font-family: var(--secondary-font-family);
+  font-size: 18px;
+  font-weight: 700;
+  transition: opacity 0.3s ease;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  @media only screen and (max-width: $tablet) {
+    font-size: 16px;
+  }
+}
+
+.footer-copyright__link {
+  color: var(--accent-color);
+  text-transform: uppercase;
 }
