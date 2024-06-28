@@ -382,6 +382,7 @@ body {
   max-width: 1100px;
   width: 100%;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 .visually-hidden {
@@ -447,7 +448,7 @@ body {
   .header {
     position: static;
     background-color: transparent;
-    padding: 16px 10px;
+    padding: 16px 0;
     box-shadow: none;
   }
 }
@@ -463,8 +464,8 @@ body {
 .header .hamburger-bar__menu,
 .header .hamburger-bar__close {
   position: fixed;
-  font-size: 45px;
-  top: 22px;
+  font-size: 28px;
+  top: 15px;
   right: 10px;
   z-index: 101;
   background-color: var(--accent-color);
@@ -511,7 +512,7 @@ body {
 
 .hamburger-bar__close,
 .hamburger-bar__menu {
-  width: 32px;
+  width: 28px;
   height: auto;
 }
 
@@ -958,7 +959,7 @@ body {
 .footer {
   margin-top: 160px;
   background-color: var(--footer-bg);
-  padding: 56px 0;
+  padding: 36px 0;
 }
 @media only screen and (max-width: 576px) {
   .footer {
